@@ -1,0 +1,5 @@
+config EBBCHAR
+	tristate "Fake Char Driver"
+	default n
+	help
+	This is the ebbchar driver for android system.

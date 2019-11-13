@@ -1,0 +1,27 @@
+LOCAL_PATH:= $(call my-dir)
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES:= \
+    testebbchar.c \
+
+LOCAL_SHARED_LIBRARIES := \
+
+LOCAL_STATIC_LIBRARIES := \
+
+LOCAL_C_INCLUDES := \
+    $(LOCAL_PATH)/ \
+    bionic \
+
+LOCAL_C_INCLUDES += \
+
+LOCAL_CFLAGS += -pie -fPIE -std=c99
+
+LOCAL_FORCE_STATIC_EXECUTABLE := true
+
+LOCAL_MODULE:= testebbchar
+
+LOCAL_MULTILIB := both
+LOCAL_MODULE_STEM_32 := $(LOCAL_MODULE)_32
+LOCAL_MODULE_STEM_64 := $(LOCAL_MODULE)_64
+
+include $(BUILD_EXECUTABLE)
